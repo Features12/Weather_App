@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div id="main-region"></div>
+<script type="text/template" id="static-template">
+  <div class="container">
+    <div class="row">
+      <div class="input-field col s6">
+        <input value="Minsk" id="address" type="text" class="js-query-fld" placeholder="Minsk, Belarus">
+        <label class="active" for="address">Weather location:</label>
+      </div>
+      <div class="col s6">
+        <a class="waves-effect waves-light btn js-search-btn">Search</a>
+      </div>
+    </div>
+    <div class="row js-result-block dnone">
+      <div class="card horizontal">
+        <div class="card-image">
+          <img class="js-icon">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <h3 class="js-location"></h3>
+            <p>
+              Current temperature: <span class="js-temp"></span><br>
+              Conditions: <span class="js-condition"></span><br>
+              Wind: <span class="js-wind"></span><br>
+              Direction: <span class="js-wind-power"></span><br>
+              Pressure: <span class="js-pressure"></span><br>
+              Humidity: <span class="js-humidity"></span><br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row js-error-block dnone">
+        <div class="col">
+          <div class="card red darken-1">
+            <div class="card-content white-text">
+              <span class="card-title js-error-title">Some shit happened</span>
+              <p>Something went wrong and our monkeys have started to resolve this issue.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</script>
+{% endblock %}
+
+
